@@ -1,0 +1,93 @@
+.home {
+    background-color: #17191D;
+    z-index: 10;
+    position: relative;
+    &__bg {
+        height: 100vh;
+        .figure__left {
+            &_circle {
+                // drawing circle
+                position: absolute;
+                top: 5vh;
+                left: 20vw;
+                z-index: 1;
+                width: 256px; 
+                height: 257px;
+                background: #FF0B53;
+                border-radius: 50%;
+            }
+            &_lines{
+                position: absolute;
+                top: 8vh;
+                left: 2%;
+                z-index: -49;
+                max-width: 710px;
+                max-height: 527px;
+            }
+            &_cross {
+                z-index: 1;
+                position: absolute;
+                bottom: 5vh;
+                left: 10vw;
+            }
+        }
+        .figure__right {
+            &_cross {
+                z-index: 1;
+                position: absolute;
+                bottom: 35vh;
+                right: 0;
+                margin: 0 auto;
+            }
+            &_lines {
+                position: absolute;
+                bottom: -8vh;
+                right: 1vw;
+                z-index: -49;
+                max-width: 852px;
+                max-height: 719px;
+            }
+        }
+        .figure__bottom {
+            z-index: -60;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%); 
+        }
+    }
+    
+    &__wrapper {
+        position: absolute;
+        bottom: 20vh;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        max-width: 1268px;
+        z-index: 99;
+        background: linear-gradient(rgba(122, 122, 122, 0.19) 0%, rgba(122, 122, 122, 0) 100%);
+        backdrop-filter: blur(35px);
+        border-radius: 7px;
+        box-shadow: 0px 4px 4px 0px #32323226;
+    }
+    &__window {
+        padding: 72px 46px;
+        color: #fff;
+        text-align: center;
+    }
+    &__title h2 {
+        font-weight: 700;
+        @include fz(72);
+        padding-bottom: 40px;
+    }
+    &__subtitle p {
+        padding: 0 220px 114px;
+        line-height: calc(28/16 * 100%);
+    }
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+    }
+}

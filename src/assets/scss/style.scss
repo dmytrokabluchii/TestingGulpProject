@@ -1,0 +1,20 @@
+$base_size:16;
+
+@mixin fz($px_size) {
+    font-size: calc($px_size/$base_size)+rem;
+}
+
+@import "hamburger";
+@import "settings";
+
+@import "header";
+@import "hamburger-menu";
+@import "pop_up";
+@import "home";
+@import "partners";
+@import "team";
+@import "contacts";
+
+@import "footer";
+@import "_responsive"
+

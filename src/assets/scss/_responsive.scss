@@ -1,0 +1,718 @@
+$base_size:16;
+@mixin fz($px_size) {
+    font-size: calc($px_size/$base_size)+rem;
+}
+
+@media screen and (max-width:1440px) {
+    .team {
+        &__wrapper {
+            .figure__right {
+                top: 5%;
+                right: 7%;
+                img {
+                    max-width: 75%;
+                }
+            }
+            .figure__left {
+                bottom: 1%;
+                left: 25%;
+                img {
+                    max-width: 75%;
+                }
+            }
+        }
+        &__list {
+            .team__item {
+                .team__link {
+                    .team__info {
+                        .team__text {
+                            padding-bottom: 20px;
+                            &_name {
+                                @include fz(24);
+                                line-height: 28px;
+                            }
+                            &_occupation {
+                                @include fz(18);
+                                line-height: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__button {
+            .btn {
+                @include fz(19);
+                padding: 11px 32px;
+            }
+        }
+    }
+
+    .footer {
+        &__wrapper {
+            background-position: 98% 50%;
+        }
+    }
+}
+
+@media screen and (max-width:1320px) {
+    .home {
+        &__wrapper {
+            max-width: 900px;
+        }
+        &__window {
+            padding: 50px 35px;
+        }
+        &__subtitle p {
+            padding: 0 90px 70px;
+        }
+    }
+
+    .partners {
+        &__info {
+            justify-content: space-between;
+            grid-template-columns: repeat(1, 2fr);
+            // grid-template-rows: repeat(2, 1fr);
+        }
+        &__reviews {
+            max-width: 100%;
+        }
+    }
+
+    .footer {
+        &__wrapper {
+            background-size: 110px;
+        }
+    }
+}
+
+@media screen and (max-width:1170px) {
+    .team {
+        &__wrapper {
+            padding: 80px 0 110px;
+            .figure__right {
+                top: 3%;
+                right: 5%;
+                img {
+                    max-width: 65%;
+                }
+            }
+            .figure__left {
+                bottom: 5%;
+                left: 30%;
+                img {
+                    max-width: 65%;
+                }
+            }
+        }
+        &__title h3 {
+            padding-bottom: 50px;
+        }
+
+        &__container {
+            grid-template-columns: repeat(2, 25% 75%);
+            .team__about {
+                padding-top: 100px;
+                &_title {
+                    padding-bottom: 15px;
+                    line-height: 35px;
+                }
+                &_subtitle {
+                    line-height: 30px;
+                }
+            }
+            .team__column {
+                .team__place {
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+
+    .footer {
+        &__wrapper {
+            background-size: 0px;
+        }
+        &__column {
+            gap: 25px;
+        }
+    }
+    
+}
+
+@media screen and (max-width:1020px) {
+    .home {
+        &__bg {
+            .figure__left {
+                &_circle {
+                    top: 15vh;
+                    max-width: 119px; 
+                    max-height: 119px;
+                }
+                &_lines{
+                    max-width: 490px;
+                    max-height: 327px;
+                }
+                &_cross svg {
+                    max-width: 119px;
+                    max-width: 119px;
+                }
+            }
+            .figure__right {
+                &_cross svg {
+                    max-width: 119px;
+                    max-width: 119px;
+                }
+            }
+            .figure__bottom svg {
+                max-width: 720px;
+            }
+        }
+
+        &__wrapper {
+            max-width: 700px;
+        }
+        &__window {
+            padding: 30px 20px;
+        }
+        &__title h2 {
+            @include fz(54);
+            padding-bottom: 30px;
+        }
+        &__subtitle p {
+            padding: 0 0px 40px;
+        }
+    }
+}
+
+@media screen and (max-width:980px) {
+    .partners {
+        padding: 80px 0 80px;
+        &__title {
+            padding-bottom: 40px;
+        }
+    }
+    
+    .team {
+        &__wrapper {
+            padding: 60px 0 80px;
+            .figure__right {
+                top: 7%;
+                right: 5%;
+            }
+            .figure__left {
+                display: none;
+            }
+        }
+        &__container {
+            grid-template-columns: repeat(1, 100%);
+            .team__about {
+                padding-top: 30px;
+                padding-bottom: 30px;
+                &_subtitle {
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+
+    .footer {
+        &__wrapper {
+            padding: 70px 0 80px;
+        }
+        &__title {
+            padding-bottom: 60px;
+        }
+        &__column {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 50px;
+        }
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    .header {
+        &__menu,
+        &__button {
+            display: none;
+        }
+        .hamburger_menu {
+            display: block;
+        }
+    }
+
+    .home {
+        &__bg {
+            .figure__bottom svg {
+                max-width: 320px;
+                max-height: 150px;
+            }
+        }
+        &__wrapper {
+            max-width: 440px;
+            bottom: 10vh;
+        }
+        &__window {
+            padding: 55px 15px;
+        }
+        &__title h2 {
+            @include fz(34);
+            line-height: 39px;
+            padding-bottom: 30px;
+        }
+        &__subtitle p {
+            padding: 0 0px 40px;
+        }
+        &__buttons {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
+    .team {
+        &__container {
+            .team__column {
+                .team__place {
+                    max-width: 325px;
+                    .team__tab {
+                        &:not(:last-child) {
+                            margin-right: 0px;
+                        }
+                    }
+                    .tab-title {
+                        padding: 14px 26.5px; 
+                    }   
+                    .team__link_circle {
+                        position: absolute;
+                        top: 14px;
+                        left: 7px;
+                    }
+                }
+            }
+        }
+    }
+
+    .modal__window {
+        .modal__content {
+            max-width: 320px;
+            padding: 10px;
+        }
+        .team__column {
+            flex-direction: column;
+            .team__image {
+                img {
+                    max-width: 102px;
+                }
+            }
+            .team__info {
+                .team__title {
+                    .name__title {
+                        @include fz(16);
+                        line-height: 18px;
+                        padding: 2px 5px;
+                    }
+                }
+                .team__about {
+                    max-width: 170px;
+                    div {
+                        @include fz(16);
+                        line-height: 18px;
+                    }
+                    .team__about_row {
+                        padding: 2px 5px;
+                    }
+                }
+            }
+            .media__items {
+                gap: 10px;
+                padding: 5px;
+                width: 46%;
+                .media__links a svg {
+                    width: 24px;
+                    height: 24px;
+                    transition: all .4s ease-in-out;
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+        .mobile__subtitle {
+            @include fz(16);
+            line-height: 23px;
+        }
+    }
+}
+
+@media screen and (max-width:679px) {
+    .title {
+        @include fz(24);
+        line-height: 28px;
+    }
+
+    .home {
+        &__bg {
+            .figure__left {
+                &_lines{
+                    display: none;
+                }
+            }
+        }
+        &__wrapper {
+            max-width: 390px;
+            bottom: 12vh;
+        }
+        &__subtitle p {
+            font-weight: 300;
+            @include fz(16);
+            line-height: 19px;
+        }
+    }
+
+    .partners {
+        padding: 50px 0 50px;
+        &__reviews {
+            padding: 10px;
+        }
+        &__info {
+            grid-template-columns:repeat(2, autofil);
+            gap: 30px;
+        }
+        &__column {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+        &__reviews {
+            .partners__data {
+                .partners__name {
+                    @include fz(20);
+                    line-height: 23px;
+                }
+                .partners__occupation {
+                    @include fz(16);
+                    line-height: 18px;
+                }
+            }
+            &_text {
+                @include fz(16);
+                line-height: 22px;
+            }
+        }
+    }
+
+    .team {
+        &__wrapper {
+            padding: 50px 0 50px;
+            .figure__right {
+                position: absolute;
+                top: 5%;
+                right: 5%;
+                img {
+                    max-width: 84px;
+                }
+            }
+        }
+        &__title h3 {
+            padding-bottom: 30px;
+        }
+        .team__about {
+            padding-top: 0px;
+            padding-bottom: 20px;
+            &_title {
+                padding-bottom: 15px;
+                @include fz(20);
+                line-height: 23px;
+            }
+            &_subtitle {
+                @include fz(16);
+                line-height: 23px;
+            }
+        }
+    }
+
+    .contact {
+        position: relative;
+        background-color: #F8F8F8;
+        &__wrapper {
+            padding: 50px 0 50px;
+        }
+        &__title {
+            padding-bottom: 22px;
+        }
+        &__column {
+            max-width: 100%;
+        }
+        &__rows {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 15px;
+        }
+        .form-row {
+            height: 50px;
+            &::placeholder {
+                padding-left: 16px;
+                @include fz(16);
+                line-height: 18px;
+            }
+        }
+        &__form_job {
+            padding: 0 16px;
+            @include fz(16);
+            line-height: 18px;
+        }
+        &__message {
+            &_area {
+                @include fz(16);
+                line-height: 18px;
+            }
+        }
+        &__send {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+            gap: 40px;
+            padding-bottom: 0px;
+        }
+        .input__wrapper {
+            max-width: 600px;
+        }
+        .input__file-button {
+            padding: 16px 80px;
+        }
+
+        &__points {
+            display: none;
+        }
+    }
+
+    .footer {
+        &__wrapper {
+            padding: 50px 0 50px;
+        }
+        &__title {
+            padding-bottom: 30px;
+        }
+        &__titles {
+            padding-bottom: 20px;
+            h6 {
+                @include fz(20);
+                line-height: 23px;
+            }
+        }
+        
+        &__privacy {
+            font-weight: 300;
+            @include fz(16);
+            line-height: 18px;
+        }
+    }
+}
+
+@media screen and (max-width:539px) {
+    .home {
+        &__wrapper {
+            max-width: 335px;
+        }
+    }
+
+    .team {
+        .swiper-wrapper {
+            margin-bottom: 35px;
+        }
+        .swiper-horizontal>.swiper-scrollbar {
+            left: 13%;
+            bottom: 0;
+            width: 100%;
+        }
+        .swiper-button-prev {
+            display: none;
+        }
+        .swiper-button-next {
+            display: none;
+        }
+    }
+}
+
+
+
+@media screen and (max-height:850px) {
+    .home {
+        &__window {
+            padding: 20px 15px;
+        }
+        &__title h2 {
+            @include fz(34);
+            line-height: 39px;
+            padding-bottom: 30px;
+        }
+        &__subtitle p {
+            padding: 0 0px 40px;
+            @include fz(17);
+        }
+        &__buttons {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+}
+
+@media screen and (max-height:599px) {
+    .mobile_menu_wrap { 
+        .sidemenu__list {
+            li {
+                padding: 15px 20px;
+            }
+        }
+        .mobile__footer {
+            gap: 20px;
+            padding-bottom: 15px;
+        }
+    }
+}
+
+@media screen and (max-height:580px) {
+    .home {
+        &__wrapper {
+            max-width: 560px;
+        }
+        &__window {
+            padding: 15px 10px;
+        }
+        &__title h2 {
+            @include fz(30);
+            line-height: 34px;
+            padding-bottom: 20px;
+        }
+        &__subtitle p {
+            padding: 0 0px 20px;
+            @include fz(16);
+        }
+        &__buttons {
+            gap: 15px;
+            .btn {
+                padding: 12px 40px;
+                @include fz(20);
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+@media screen and (max-height:490px) {
+    .modal__window {
+        .modal__content {
+            max-width: 490px;
+            padding: 10px;
+        }
+        .team__column {
+            flex-direction: column;
+            gap: 5px;
+            padding-bottom: 5px;
+            .team__image {
+                img {
+                    max-width: 102px;
+                }
+            }
+            .team__info {
+                .team__title {
+                    gap: 5px;
+                    .name__title {
+                        @include fz(16);
+                        line-height: 18px;
+                        padding: 0px 5px;
+                    }
+                }
+                .team__about {
+                    max-width: 170px;
+                    gap: 5px;
+                    div {
+                        @include fz(16);
+                        line-height: 18px;
+                    }
+                    .team__about_row {
+                        padding: 0px 5px;
+                    }
+                }
+            }
+            .media__items {
+                gap: 10px;
+                padding: 5px 5px;
+                width: 30%;
+                .media__links a svg {
+                    width: 24px;
+                    height: 24px;
+                    transition: all .4s ease-in-out;
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+        .mobile__subtitle {
+            @include fz(16);
+            line-height: 20px;
+        }
+    }
+}
+
+@media screen and (max-height:440px) {
+    .home {
+        &__wrapper {
+            bottom: 5vh;
+        }
+        &__window {
+            padding: 10px 5px;
+        }
+        &__title h2 {
+            @include fz(26);
+            line-height: 28px;
+            padding-bottom: 15px;
+        }
+        &__subtitle p {
+            padding: 0 0px 15px;
+        }
+    }
+
+    .mobile_menu_wrap { 
+        .sidemenu__list {
+            li {
+                padding: 7px 20px;
+            }
+        }
+        .mobile__footer {
+            gap: 10px;
+            padding-bottom: 10px;
+        }
+    }
+}
+
+@media screen and (max-height:360px) {
+    .mobile_menu_wrap { 
+        .sidemenu__list {
+            li {
+                padding: 4px 20px;
+                a {
+                    @include fz(18);
+                    line-height: 20px;
+                    &:hover {
+                        text-decoration: 2px underline;
+                    }
+                }
+            }
+        }
+        .mobile__footer {
+            gap: 5px;
+            padding-bottom: 5px;
+            .mobile__media {
+                li {
+                    a svg {
+                        width: 25px;
+                        height: 25px;
+                    }
+                }
+            }
+        }
+    }
+}

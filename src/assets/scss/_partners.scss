@@ -1,0 +1,66 @@
+.partners {
+    padding: 120px 0 120px;
+    background-color: #F8F8F8;
+
+    &__title {
+        padding-bottom: 90px;
+    }
+    &__info {
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    &__reviews {
+        max-width: 860px;
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 30px;
+        .partners__about {
+            display: flex;
+            padding-bottom: 30px;
+        }
+        .partners__data {
+            margin-left: 15px;
+            .partners__name {
+                color: #000;
+                font-weight: 500;
+                @include fz(24);
+                line-height: 27px;
+            }
+            .partners__occupation {
+                color: #575757;
+                font-weight: 300;
+                @include fz(20);
+                line-height: 23px;
+            }
+        }
+        &_text {
+            color: #3D3D3D;
+            font-weight: 300;
+            @include fz(20);
+            line-height: calc(28/16 * 100%);
+        }
+    }
+
+    &__column {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        .partners__logo {
+            list-style: none;
+            background-color: #fff;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 18px;
+            cursor: pointer;
+        }
+    }
+
+    &__tabcontent {
+        display: none;
+    }
+    
+}

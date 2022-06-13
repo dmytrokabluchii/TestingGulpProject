@@ -1,0 +1,54 @@
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(255, 255, 255, .0);
+    z-index: 200;
+    &__block {
+        height: 100%;
+    }
+    &__main {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        align-items: center;
+    }
+    &__content {
+        height: 100%;
+    }
+    .nav__menu ul {
+        list-style: none;
+        display: flex;
+        // Конструкция отступов в меню(кроме последнего пункта)
+        li:not(:last-child) {
+            margin-right: 30px;
+        }
+        li {
+            a {
+                text-decoration: none;
+                color: #fff;
+                font-weight: 400;
+                text-transform: uppercase;
+                // padding: 7px;
+                // имитация бордера(от дергания при наведении)
+                border: 1px solid transparent;
+                transition: all .3s ease-in-out;
+                &:hover {
+                    border-bottom: 1px solid #fff;
+                }
+            }
+        }
+    }
+}
+
+.header.fixed_header {
+    height: 70px;
+    background: linear-gradient(243.43deg, rgb(255, 11, 83, .8) 16%, rgba(23, 25, 29, 0.8) 90%);
+    backdrop-filter: blur(5px);
+    // z-index: 199;
+    .header__logo {
+        padding-top: 3px;
+    }
+}
