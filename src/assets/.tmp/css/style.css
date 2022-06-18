@@ -328,7 +328,7 @@ input {
   justify-content: center;
   align-items: center;
   gap: 25px;
-  padding-bottom: 35px;
+  padding-bottom: 55px;
 }
 .mobile_menu_wrap .mobile__footer .mobile__media {
   list-style: none;
@@ -675,6 +675,7 @@ input {
 
 .team {
   background-color: #fff;
+  --swiper-navigation-size: 40px;
 }
 .team__wrapper {
   padding: 120px 0 140px;
@@ -689,7 +690,6 @@ input {
   position: absolute;
   bottom: 5%;
   left: 5%;
-  z-index: 1;
 }
 .team__title h3 {
   padding-bottom: 70px;
@@ -701,6 +701,7 @@ input {
 }
 .team__container .team__about {
   padding-top: 130px;
+  z-index: 5;
 }
 .team__container .team__about_title {
   padding-bottom: 18px;
@@ -846,12 +847,12 @@ input {
   align-items: center;
 }
 .team .swiper-wrapper {
-  margin-bottom: 60px;
+  margin-bottom: 65px;
 }
 .team .swiper-horizontal > .swiper-scrollbar {
-  left: 1%;
-  bottom: 0;
-  height: 7px;
+  left: 0%;
+  bottom: 15px;
+  height: 1px;
   max-width: 75%;
 }
 .team .swiper-scrollbar {
@@ -859,6 +860,8 @@ input {
   border-radius: 0px;
 }
 .team .swiper-scrollbar-drag {
+  top: -3.5px;
+  height: 7px;
   background: #17191D;
   border-radius: 1px;
 }
@@ -1075,7 +1078,7 @@ input {
   color: #B1B1B1;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1675px) {
   .team__wrapper .figure__right {
     top: 5%;
     right: 7%;
@@ -1090,6 +1093,8 @@ input {
   .team__wrapper .figure__left img {
     max-width: 75%;
   }
+}
+@media screen and (max-width: 1440px) {
   .team__list .team__item .team__link .team__info .team__text {
     padding-bottom: 20px;
   }
@@ -1436,7 +1441,8 @@ input {
     gap: 15px;
   }
   .contact .form-row {
-    height: 50px;
+    height: 56px;
+    padding: 15px 10px;
   }
   .contact .form-row::placeholder {
     padding-left: 16px;

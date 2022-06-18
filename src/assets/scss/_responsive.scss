@@ -3,7 +3,7 @@ $base_size:16;
     font-size: calc($px_size/$base_size)+rem;
 }
 
-@media screen and (max-width:1440px) {
+@media screen and (max-width:1675px) {
     .team {
         &__wrapper {
             .figure__right {
@@ -21,6 +21,11 @@ $base_size:16;
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width:1440px) {
+    .team {
         &__list {
             .team__item {
                 .team__link {
@@ -449,7 +454,8 @@ $base_size:16;
             gap: 15px;
         }
         .form-row {
-            height: 50px;
+            height: 56px;
+            padding: 15px 10px;
             &::placeholder {
                 padding-left: 16px;
                 @include fz(16);

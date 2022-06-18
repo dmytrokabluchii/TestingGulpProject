@@ -32,32 +32,12 @@ $(function(){
       $("body").removeClass("open");
   });
 
-  // Modal window
-   $('.team__button_read, .btn__read').click(function () {
-    $('.modal__window').fadeIn();
-    $('.modal__window').addClass('disabled');
-  });
-  // закрыть на крестик
-  $('.modal__close_btn').click(function () {
-      $('.modal__window').fadeOut(600); // закрытие с плавной анимацией, где 600 это время в мс
-  });
-  // закрыть по клику вне окна
-  $(document).mouseup(function (e) {
-      let popup = $('.modal__content');
-      if (e.target != popup[0] && popup.has(e.target).length === 0) {
-          $('.modal__window').fadeOut(600);
-      }
-  });
-  // закрыть по ESC
-  $(document).on('keydown', function (event) {
-      if (event.keyCode == 27) {
-          $('.modal__window').fadeOut(600);
-      }
-  });
-
    // init Swiper:
    const swiper = new Swiper('.swiper', {
-    // slidesPerView: 3,
+    grabCursor: true,
+    autoHeight: true,
+    rewind: true,
+    // slideToClickedSlide: true,
     spaceBetween: 20,
     breakpoints: {
       // when window width is >= 768px
@@ -83,10 +63,32 @@ $(function(){
       el: '.swiper-scrollbar',
       draggable: true,
     },
-    grabCursor: true,
     // autoplay: {
     //   delay: 5000,
     // },
+  });
+
+  // Modal window
+  $('.team__button_read, .btn__read').click(function () {
+    $('.modal__window').fadeIn();
+    $('.modal__window').addClass('disabled');
+  });
+  // закрыть на крестик
+  $('.modal__close_btn').click(function () {
+      $('.modal__window').fadeOut(600); // закрытие с плавной анимацией, где 600 это время в мс
+  });
+  // закрыть по клику вне окна
+  $(document).mouseup(function (e) {
+      let popup = $('.modal__content');
+      if (e.target != popup[0] && popup.has(e.target).length === 0) {
+          $('.modal__window').fadeOut(600);
+      }
+  });
+  // закрыть по ESC
+  $(document).on('keydown', function (event) {
+      if (event.keyCode == 27) {
+          $('.modal__window').fadeOut(600);
+      }
   });
 
   // phone mask
