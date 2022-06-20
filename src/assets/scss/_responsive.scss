@@ -3,29 +3,23 @@ $base_size:16;
     font-size: calc($px_size/$base_size)+rem;
 }
 
-@media screen and (max-width:1675px) {
+@media screen and (max-width:1490px) {
     .team {
         &__wrapper {
             .figure__right {
-                top: 5%;
+                top: 2%;
                 right: 7%;
                 img {
-                    max-width: 75%;
+                    max-width: 80%;
                 }
             }
             .figure__left {
-                bottom: 1%;
-                left: 25%;
+                bottom: 2%;
                 img {
-                    max-width: 75%;
+                    max-width: 80%;
                 }
             }
         }
-    }
-}
-
-@media screen and (max-width:1440px) {
-    .team {
         &__list {
             .team__item {
                 .team__link {
@@ -81,6 +75,14 @@ $base_size:16;
         }
         &__reviews {
             max-width: 100%;
+        }
+    }
+
+    .team {
+        &__wrapper {
+            .figure__left {
+                display: none;
+            }
         }
     }
 
@@ -204,9 +206,6 @@ $base_size:16;
             .figure__right {
                 top: 7%;
                 right: 5%;
-            }
-            .figure__left {
-                display: none;
             }
         }
         &__container {
@@ -522,7 +521,9 @@ $base_size:16;
             max-width: 335px;
         }
     }
+}
 
+@media screen and (max-width:489px) {
     .team {
         .swiper-wrapper {
             margin-bottom: 35px;

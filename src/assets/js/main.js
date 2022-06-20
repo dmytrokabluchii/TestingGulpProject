@@ -37,15 +37,17 @@ $(function(){
     grabCursor: true,
     autoHeight: true,
     rewind: true,
-    // slideToClickedSlide: true,
     spaceBetween: 20,
+    // откл. свайп при нажатии на кнопку в слайдере
+    watchSlidesProgress: true,
+    setWrapperSize: true,
     breakpoints: {
       // when window width is >= 768px
       390: {
         slidesPerView: 1,
         spaceBetween: 15
       },
-      540: {
+      490: {
         slidesPerView: 2,
       },
       768: {

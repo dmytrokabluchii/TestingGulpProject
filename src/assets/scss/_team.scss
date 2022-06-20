@@ -1,4 +1,5 @@
 .team {
+    font-family: Ubuntu;
     background-color: #fff;
     &__wrapper {
         padding: 120px 0 140px;
@@ -33,8 +34,10 @@
                 line-height: 39px;
             }
             &_subtitle {
+                font-weight: 300;
                 color: #3D3D3D;
-                line-height: 35px;
+                font-size: calc(25px + 16 * ((100% - 360px) / (1920 - 360)));
+                line-height: 140%;
             }
         }
 
@@ -181,10 +184,6 @@
         align-items:center;
     }
 
-    .swiper {
-        // height: 100%;
-        // height: 430px;
-    }
     .swiper-wrapper {
         // height: 430px;
         margin-bottom: 65px;

@@ -674,6 +674,7 @@ input {
 }
 
 .team {
+  font-family: Ubuntu;
   background-color: #fff;
   --swiper-navigation-size: 40px;
 }
@@ -710,8 +711,10 @@ input {
   line-height: 39px;
 }
 .team__container .team__about_subtitle {
+  font-weight: 300;
   color: #3D3D3D;
-  line-height: 35px;
+  font-size: calc(25px + 16 * (100% - 360px) / 1560);
+  line-height: 140%;
 }
 .team__container .team__column .team__place {
   background-color: #F0F0F0;
@@ -1078,23 +1081,20 @@ input {
   color: #B1B1B1;
 }
 
-@media screen and (max-width: 1675px) {
+@media screen and (max-width: 1490px) {
   .team__wrapper .figure__right {
-    top: 5%;
+    top: 2%;
     right: 7%;
   }
   .team__wrapper .figure__right img {
-    max-width: 75%;
+    max-width: 80%;
   }
   .team__wrapper .figure__left {
-    bottom: 1%;
-    left: 25%;
+    bottom: 2%;
   }
   .team__wrapper .figure__left img {
-    max-width: 75%;
+    max-width: 80%;
   }
-}
-@media screen and (max-width: 1440px) {
   .team__list .team__item .team__link .team__info .team__text {
     padding-bottom: 20px;
   }
@@ -1132,6 +1132,10 @@ input {
   }
   .partners__reviews {
     max-width: 100%;
+  }
+
+  .team__wrapper .figure__left {
+    display: none;
   }
 
   .footer__wrapper {
@@ -1232,9 +1236,6 @@ input {
   .team__wrapper .figure__right {
     top: 7%;
     right: 5%;
-  }
-  .team__wrapper .figure__left {
-    display: none;
   }
   .team__container {
     grid-template-columns: repeat(1, 100%);
@@ -1499,7 +1500,8 @@ input {
   .home__wrapper {
     max-width: 335px;
   }
-
+}
+@media screen and (max-width: 489px) {
   .team .swiper-wrapper {
     margin-bottom: 35px;
   }
