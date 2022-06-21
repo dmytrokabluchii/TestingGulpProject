@@ -185,15 +185,16 @@
     }
 
     .swiper-wrapper {
-        // height: 430px;
         margin-bottom: 65px;
     }
+    // .swiper-slide{height:none}
+    // прописал этот параметр в css слайдера чтобы не прыгала высота блока при скроле
+
     .swiper-horizontal>.swiper-scrollbar {
         left: 0%;
         bottom: 15px;
         height: 1px;
         max-width: 75%;
-        // max-width: 1030px;
     }
     .swiper-scrollbar {
         background: #676767;
@@ -222,5 +223,16 @@
     .swiper-button-next:after, .swiper-button-prev:after {
         color: #101020;
     }
+     // .swiper-pagination-progressbar {
+    //     max-width: 75%;
+    //     top: 96% !important;
+    //     height: 1px !important;
+    //     background: #676767;
+    // }
+    // .swiper-pagination-progressbar-fill {
+    //     background: #17191D !important;
+    //     top: -3px !important;
+    //     height: 7px !important;
+    // }
 
 }

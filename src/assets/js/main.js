@@ -40,7 +40,6 @@ $(function(){
     spaceBetween: 20,
     // откл. свайп при нажатии на кнопку в слайдере
     watchSlidesProgress: true,
-    setWrapperSize: true,
     breakpoints: {
       // when window width is >= 768px
       390: {
